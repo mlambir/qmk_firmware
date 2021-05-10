@@ -19,13 +19,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0x6F77
-#define PRODUCT_ID      0x0002
-#define DEVICE_VER      0x0002
-#define MANUFACTURER    Wootpatoot
-#define PRODUCT         Lets Split v2
-
-#define FLIP_HALF
+#define VENDOR_ID       0xFEED
+#define PRODUCT_ID      0x0BEE
+#define DEVICE_VER      0x0001
+#define MANUFACTURER    Duckle29
+#define PRODUCT         Lets Split Sockets
 
 /* key matrix size */
 // Rows are doubled-up
@@ -33,9 +31,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COLS 6
 
 // wiring of each half
-#define MATRIX_ROW_PINS { D7, E6, B4, B5 }
-#define MATRIX_COL_PINS { F6, F7, B1, B3, B2, B6 }
-//#define MATRIX_COL_PINS { B6, B2, B3, B1, F7, F6 } //uncomment this line and comment line above if you need to reverse left-to-right key order
+#define MATRIX_ROW_PINS { B1, B5, E6, B4 }
+#define MATRIX_COL_PINS { F4, F7, D7, B3, B2, B6}
+// #define MATRIX_COL_PINS { B6, B2, B3, D7, F7, F4} //uncomment this line and comment line above if you need to reverse left-to-right key order
 
 #define DIODE_DIRECTION COL2ROW
 
@@ -57,11 +55,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define LOCKING_RESYNC_ENABLE
 
 /* ws2812 RGB LED */
-#define RGB_DI_PIN D3
+#define RGB_DI_PIN D4
 
-#define RGBLED_NUM 16    // Number of LEDs
-#define RGBLED_SPLIT {8, 8}   // Number of LEDs
-#define RGBLIGHT_ANIMATIONS
+#define RGBLED_NUM 12    // Number of LEDs
+
+/* Audio settings */
+#ifdef AUDIO_ENABLE
+    #define C6_AUDIO // Define this to enable the buzzer
+#endif
 
 /*
  * Feature disable options
@@ -78,5 +79,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION

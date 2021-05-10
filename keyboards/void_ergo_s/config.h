@@ -18,12 +18,15 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
+#include "config_common.h"
+
+
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0x6F77
-#define PRODUCT_ID      0x0002
-#define DEVICE_VER      0x0002
-#define MANUFACTURER    Wootpatoot
-#define PRODUCT         Lets Split v2
+#define VENDOR_ID 0xF055
+#define PRODUCT_ID 0x3535
+#define DEVICE_VER 0x0001
+#define MANUFACTURER Victor Lucachi
+#define DESCRIPTION A handwired split keyboard inspired by the Corne
 
 #define FLIP_HALF
 
